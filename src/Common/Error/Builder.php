@@ -111,8 +111,11 @@ class Builder
     {
         $message = $this->header('HTTP Error');
 
-        $message .= sprintf("The remote server returned a \"%d %s\" error for the following transaction:\n\n",
-            $response->getStatusCode(), $response->getReasonPhrase());
+        $message .= sprintf(
+            "The remote server returned a \"%d %s\" error for the following transaction:\n\n",
+            $response->getStatusCode(),
+            $response->getReasonPhrase()
+        );
 
         $message .= $this->header('Request');
         $message .= trim($this->str($request)) . PHP_EOL . PHP_EOL;
@@ -158,8 +161,11 @@ class Builder
     {
         $message = $this->header('User Input Error');
 
-        $message .= sprintf("%s was expected, but the following value was passed in:\n\n%s\n",
-            $expectedType, print_r($userValue, true));
+        $message .= sprintf(
+            "%s was expected, but the following value was passed in:\n\n%s\n",
+            $expectedType,
+            print_r($userValue, true)
+        );
 
         $message .= "Please ensure that the value adheres to the expectation above. ";
 
