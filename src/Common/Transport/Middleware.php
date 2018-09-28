@@ -9,6 +9,8 @@ use OpenStack\Common\Auth\AuthHandler;
 use OpenStack\Common\Auth\Token;
 use OpenStack\Common\Error\Builder;
 use Psr\Http\Message\ResponseInterface;
+use Psr\Log\LoggerInterface;
+use Psr\Log\LogLevel;
 
 final class Middleware
 {
