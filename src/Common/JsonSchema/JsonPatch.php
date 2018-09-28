@@ -78,7 +78,7 @@ class JsonPatch
 
     protected function shouldPartiallyReplace($o1, $o2)
     {
-        return count(array_diff_key((array) $o1, (array) $o2)) < count($o1);
+        return count(array_diff_key((array) $o1, (array) $o2)) < 1;
     }
 
     protected function arrayDiff(array $a1, array $a2)
