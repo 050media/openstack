@@ -13,7 +13,7 @@ use OpenStack\Common\Resource\HasMetadata;
 /**
  * @property \OpenStack\ObjectStore\v1\Api $api
  */
-class Object extends AbstractResource implements Creatable, Deletable, HasMetadata
+class StorageObject extends AbstractResource implements Creatable, Deletable, HasMetadata
 {
     use MetadataTrait;
 
